@@ -1,9 +1,11 @@
 # soccerdata
 
 install: 
- $ sudo apt-get install python-pip
- $ sudo apt-get install python-dev
- $ sudo apt-get install build-essential
+$ sudo apt-get install python-pip 
+
+$ sudo apt-get install python-dev
+
+$ sudo apt-get install build-essential
  
 pip install django djangorestframework markdown django-filter dj-static
 
