@@ -53,21 +53,21 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'soccerdata.urls'
 
-TEMPLATES = [
-    {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
-            ],
-        },
-    },
-]
+#TEMPLATES = [
+#    {
+#        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+#        'DIRS': [],
+#        'APP_DIRS': True,
+#        'OPTIONS': {
+#            'context_processors': [
+#                'django.template.context_processors.debug',
+#                'django.template.context_processors.request',
+#                'django.contrib.auth.context_processors.auth',
+#                'django.contrib.messages.context_processors.messages',
+#            ],
+#        },
+#    },
+#]
 
 WSGI_APPLICATION = 'soccerdata.wsgi.application'
 
@@ -101,7 +101,29 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = 'staticfiles'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder'
+)
+
+TEMPLATE_DIRS = (
+    os.path.join(BASE_DIR, 'templates'),
+)
 
 REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': ['rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly']
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',
+    )
 }
+
+# Honor the 'X-Forwarded-Proto' header for request.is_secure()
+#SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+# Allow all host headers
+#ALLOWED_HOSTS = ['*']
