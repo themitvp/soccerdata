@@ -23,3 +23,8 @@ https://github.com/brwr/thinkster-django-angular-boilerplate
 
 Den online side:
 http://188.166.37.43:8000/
+
+For at køre serveren på digital ocean:
+
+1. ssh ind på serveren
+2. ./manage.py runserver 0.0.0.0:8000
