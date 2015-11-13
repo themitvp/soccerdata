@@ -9,6 +9,10 @@ $ sudo apt-get install build-essential
  
 pip install django djangorestframework markdown django-filter dj-static
 
+install npm
+
+intall bower with npm
+
 Links jeg har fulgt:
 
 http://agiliq.com/blog/2014/08/deploying-a-django-app-on-amazon-ec2-instance/
