@@ -1,10 +1,13 @@
 <div class="col-sm-3 col-md-2 sidebar">
 	<ul class="nav nav-sidebar">
-		<li class="active">
-			<a href="#">Dashboard</a>
+		<li ng-class="{ active: isActive('/')}">
+			<a href="/">Dashboard</a>
 		</li>
-		<li><a href="#">Menu 2</a></li>
-		<li><a href="#">Menu 3</a></li>
-		<li><a href="#">Menu 4</a></li>
+		<li ng-class="{ active: isActive('/classifier')}">
+			<a href="/classifier">Classifier</a>
+		</li>
+		<li ng-class="{ active: isActive('/about')}">
+			<a href="/about">About The Project</a>
+		</li>
 	</ul>
 </div>

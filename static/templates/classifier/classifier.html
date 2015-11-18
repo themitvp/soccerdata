@@ -1,4 +1,4 @@
-<h1 class="page-header">Dashboard</h1>
+<h1 class="page-header">Classifier</h1>
 
 <div>
 	<div class="row">
@@ -6,8 +6,11 @@
 	    <div class="thumbnail">
 	      <div class="caption">
 	        <h3>Thumbnail label</h3>
-	        <p>...</p>
-	        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+	        <pre ng-bind="testdata.message"></pre>
+	        <p>
+	        	<a href="#" ng-click="getTest()" class="btn btn-primary" role="button">Button</a> 
+	        	<a href="#" class="btn btn-default" role="button">Button</a>
+	        </p>
 	      </div>
 	    </div>
 	  </div>

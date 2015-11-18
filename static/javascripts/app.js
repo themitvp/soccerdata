@@ -1,4 +1,4 @@
-var app = angular.module('soccerApp', ['ngRoute', 'route-segment', 'view-segment', 'ngAnimate', 'ui.bootstrap', 'angular-loading-bar']);
+var app = angular.module('soccerApp', ['ngRoute', 'route-segment', 'view-segment', 'ngAnimate', 'ui.bootstrap', 'ngResource', 'angular-loading-bar']);
 
 var resolve = {
     delay: function ($q, $timeout) {
@@ -33,15 +33,24 @@ app.config(function ($routeSegmentProvider, $locationProvider, $routeProvider) {
 
     $routeSegmentProvider
 
-        .when('/', 'dashboard')
-        //.when('/import', 'import')
+        .when('/', 'socialnetwork')
+        .when('/classifier', 'classifier')
+        .when('/about', 'about')
         //.when('/overview/:dataSetId', 'overview')
         .otherwise('/')
 
-        .segment('dashboard', {
+        .segment('socialnetwork', {
             default: true,
-            templateUrl: '/static/templates/dashboard.html?1',
-            controller: 'dashboardController'
+            templateUrl: '/static/templates/socialnetwork/socialnetwork.html?1',
+            controller: 'socialnetworkController'
+        })
+        .segment('classifier', {
+            templateUrl: '/static/templates/classifier/classifier.html?1',
+            controller: 'classifierController'
+        })
+        .segment('about', {
+            templateUrl: '/static/templates/about/about.html?1',
+            controller: 'aboutController'
         });
 });
 
@@ -60,4 +69,9 @@ app.run(function ($rootScope, $window) {
             $window.history.back();
         };
     });
+});
+
+// Keep trailing slash when fetching from API
+app.config(function($resourceProvider) {
+    $resourceProvider.defaults.stripTrailingSlashes = false;
 });

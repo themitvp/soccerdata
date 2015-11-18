@@ -14,7 +14,7 @@ class IndexView(TemplateView):
         return super(IndexView, self).dispatch(*args, **kwargs)
 
 
-class DashboardView(viewsets.ViewSet):
+class SocialnetworkView(viewsets.ViewSet):
 
     def list(self, request):
         return Response({

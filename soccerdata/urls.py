@@ -1,9 +1,9 @@
 from django.conf.urls import patterns, url, include
 from rest_framework_nested import routers
-from soccerdata.views import IndexView, DashboardView
+from soccerdata.views import IndexView, SocialnetworkView
 
 router = routers.SimpleRouter()
-router.register(r'dashboard', DashboardView, base_name="dashboard")
+router.register(r'socialnetwork', SocialnetworkView, base_name="socialnetwork")
 
 urlpatterns = patterns(
     '',
