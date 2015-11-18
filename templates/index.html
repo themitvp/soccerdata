@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html ng-app="soccer">
+<html ng-app="soccerApp" ng-controller="mainController">
 <head>
 	<meta charset="UTF-8">
-	<title>Soccer Data</title>
+	<title ng-bind="Page.title()"></title>
 	<base href="/" />
 
   	{% include 'stylesheets.html' %}
@@ -13,7 +13,12 @@
 
 	<div class="container-fluid">
 	    <div class="row">
-	     	<div class="col-xs-12 ng-view"></div>
+	    	{% include 'sidebar.html' %}
+	     	<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main ng-cloak view-animate-container" ng-class="direction">
+	     		<!-- angular templating -->
+		        <!-- this is where content will be injected -->
+		        <div app-view-segment="0" class="row view-animate page"></div>
+	     	</div>
 	    </div>
   	</div>
 
