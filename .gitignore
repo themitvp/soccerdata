@@ -123,3 +123,4 @@ sftp-config.json
 __pycache__/
 local_settings.py
 
+*.sqlite3
