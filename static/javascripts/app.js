@@ -34,6 +34,7 @@ app.config(function ($routeSegmentProvider, $locationProvider, $routeProvider) {
     $routeSegmentProvider
 
         .when('/', 'socialnetwork')
+        .when('/network', 'network')
         .when('/classifier', 'classifier')
         .when('/about', 'about')
         //.when('/overview/:dataSetId', 'overview')
@@ -43,6 +44,10 @@ app.config(function ($routeSegmentProvider, $locationProvider, $routeProvider) {
             default: true,
             templateUrl: '/static/templates/socialnetwork/socialnetwork.html?1',
             controller: 'socialnetworkController'
+        })
+        .segment('network', {
+            templateUrl: '/static/templates/socialnetwork/d3graph.html?1',
+            controller: 'networkController'
         })
         .segment('classifier', {
             templateUrl: '/static/templates/classifier/classifier.html?1',

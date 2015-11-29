@@ -1,13 +1,14 @@
-app.controller('socialnetworkController', function ($scope, $http, $location, $routeSegment, Page, socialnetworkService) {
+app.controller('networkController', function ($scope, $http, $location, $routeSegment, Page, socialnetworkService) {
     $scope.Page = Page;
     $scope.$routeSegment = $routeSegment;
-    
+    $scope.selectednode = "test";
 
-    Page.setTitle('Social Network');
+    Page.setTitle('Network Graph');
 
     $scope.init = function() {
         $scope.nodes = [];
         $scope.nodelinks = [];
+
         
         socialnetworkService.getGraph().then(function() {
             $scope.nodes = socialnetworkService.nodes;
