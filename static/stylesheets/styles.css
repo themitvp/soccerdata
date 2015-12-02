@@ -7,6 +7,9 @@
   padding-top: 50px;
 }
 
+img {
+  max-width: 500px;
+}
 
 /*
  * Global add-ons
@@ -192,4 +195,21 @@ hr.tooltip-hr {
 
 .tooltip .name {
   font-weight:bold;
+}
+
+.numberCircle {
+    border-radius: 50%;
+    behavior: url(PIE.htc);
+    width: 90px;
+    height: 90px;
+    padding: 26px 22px;
+    background: #fff;
+    border: 2px solid #666;
+    color: #666;
+    text-align: center;
+    font: 32px Arial, sans-serif;
+}
+
+.ng-table-pager {
+  display: none;
 }

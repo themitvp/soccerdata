@@ -2,6 +2,63 @@
 
 <div class="row">
 	<div class="col-sm-12">
-		<p>In this page we will explain about the social network</p>
+		<img src="static/images/network.png">
+		<p>
+			A network graph of the soccer players, who have at some point played together, has been created. With the network graph it is possible to investigate the data about soccer players more efficently.
+		</p>
+		
+		<p>
+			The network was created with the following attributes:
+		</p>
+		<ul>
+			<li>
+				<strong>Nodes:</strong> Soccer players
+				<ul>
+					<li><strong>Attribute:</strong> Name</li>
+					<li><strong>Attribute:</strong> Age</li>
+					<li><strong>Attribute:</strong> Current Team</li>
+					<li><strong>Attribute:</strong> Market Value</li>
+				</ul>
+			</li>
+			<li>
+				<strong>Links:</strong> A link is esablished between two soccer players if they have played on the same team
+				<ul>
+					<li><strong>Attribute:</strong> Team</li>
+				</ul>
+			</li>
+		</ul>
+
+		<p>Based on the created network, different areas have been analysed. </p>
+
+		<div class="list-group">
+			<a href="network/degree" class="list-group-item">
+				<h4 class="list-group-item-heading">Degree Distribution</h4>
+				<p class="list-group-item-text">The degree distribution is analysed in order to find out how the number of links is distributed across the soccer players</p>
+			</a>
+			<a href="#" class="list-group-item">
+				<h4 class="list-group-item-heading">The Player Index</h4>
+				<p class="list-group-item-text">How many players are there from one player to another? Does the six degrees of separation occur in a soccer player network?</p>
+			</a>
+			<a href="#" class="list-group-item">
+				<h4 class="list-group-item-heading">Most Influential Players</h4>
+				<p class="list-group-item-text">Which players links the network together?</p>
+			</a>
+			<a href="#" class="list-group-item">
+				<h4 class="list-group-item-heading">Old Players are more Loyal</h4>
+				<p class="list-group-item-text">One might think that in the good old days soccer players were more loyal to their club hence they did not change clubs at often. The network was investigated based on the age of the soccer player to prove the hypothesis right or wrong.</p>
+			</a>
+			<a href="#" class="list-group-item">
+				<h4 class="list-group-item-heading">Friendship Paradox</h4>
+				<p class="list-group-item-text">Does the well known network friendship paradox occur in the soccer player network: does the soccer players have fewer links than the other soccers player they are linked to, on average. Furthermore, is the average market value for a soccer player's linked connections higher than his own market value?</p>
+			</a>
+			<a href="#" class="list-group-item">
+				<h4 class="list-group-item-heading">Communities</h4>
+				<p class="list-group-item-text">Do the deduced communities correspond with the nationality and do communities overlap?</p>
+			</a>
+			<a href="#" class="list-group-item">
+				<h4 class="list-group-item-heading">Interactive Graph</h4>
+				<p class="list-group-item-text">A small part of the soccer player network has been extracted and used to create an interactive graph.</p>
+			</a>
+		</div>
 	</div>
 </div>

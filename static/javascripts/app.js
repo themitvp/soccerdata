@@ -45,11 +45,13 @@ app.config(function ($routeSegmentProvider, $locationProvider, $routeProvider) {
         .when('/network/interactive', 'network.interactive')
 
         .when('/wiki', 'wiki')
-        .when('/wiki/playerposition', 'playerposition')
-        .when('/wiki/marketvalue', 'marketvalue')
-        .when('/wiki/wordcloud', 'wordcloud')
+        .when('/wiki/playerposition', 'wiki.playerposition')
+        .when('/wiki/marketvalue', 'wiki.marketvalue')
+        .when('/wiki/wordcloud', 'wiki.wordcloud')
         
-        .when('/transfers', 'transfers')
+        .when('/extrafun', 'extrafun')
+        .when('/extrafun/transfers', 'extrafun.transfers')
+        .when('/extrafun/italy', 'extrafun.italy')
 
         .otherwise('/')
 
@@ -111,33 +113,62 @@ app.config(function ($routeSegmentProvider, $locationProvider, $routeProvider) {
         .up()
 
         .segment('wiki', {
-            templateUrl: '/static/templates/classifier/wiki.html?1',
-            controller: 'wikiController'
+            templateUrl: '/static/templates/wiki/wiki.html?1'
         })
 
         .within()
 
+        .segment('wikipages', {
+            default: true,
+            templateUrl: '/static/templates/wiki/wikipages.html?1',
+            controller: 'wikiController',
+            resolve: resolve
+        })
+
         .segment('playerposition', {
-            templateUrl: '/static/templates/classifier/playerposition.html?1',
-            controller: 'playerpositionController'
+            templateUrl: '/static/templates/wiki/playerposition.html?1',
+            controller: 'playerpositionController',
+            resolve: resolve
         })
 
         .segment('marketvalue', {
-            templateUrl: '/static/templates/classifier/marketvalue.html?1',
-            controller: 'marketvalueController'
+            templateUrl: '/static/templates/wiki/marketvalue.html?1',
+            controller: 'marketvalueController',
+            resolve: resolve
         })
 
         .segment('wordcloud', {
-            templateUrl: '/static/templates/classifier/wordcloud.html?1',
-            controller: 'wordcloudController'
+            templateUrl: '/static/templates/wiki/wordcloud.html?1',
+            controller: 'wordcloudController',
+            resolve: resolve
         })
 
         .up()
 
+        .segment('extrafun', {
+            templateUrl: '/static/templates/extra/extra.html?1'
+        })
+
+        .within()
+
+        .segment('extrafuntext', {
+            default: true,
+            templateUrl: '/static/templates/extra/fun.html?1',
+            controller: 'extrafunController',
+            resolve: resolve
+        })
         .segment('transfers', {
-            templateUrl: '/static/templates/classifier/transfers.html?1',
-            controller: 'transfersController'
-        });
+            templateUrl: '/static/templates/extra/transfers.html?1',
+            controller: 'transfersController',
+            resolve: resolve
+        })
+        .segment('italy', {
+            templateUrl: '/static/templates/extra/italy.html?1',
+            controller: 'italyController',
+            resolve: resolve
+        })
+
+        .up();
 });
 
 app.run(function ($rootScope, $window) {
