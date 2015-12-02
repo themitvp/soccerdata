@@ -125,21 +125,21 @@ img {
   cursor: move;
 }
 
-svg .node {
+#d3-graph svg .node {
   cursor: pointer;
 }
 
-svg .node-active circle {
+#d3-graph svg .node-active circle {
   stroke: #000;
   stroke-width: 1.5px;
 }
 
-svg .node-active text {
+#d3-graph svg .node-active text {
   stroke: #000;
   z-index: 9999;
 }
 
-svg .node text {
+#d3-graph svg .node text {
   pointer-events: none;
   font: 10px sans-serif;
   -webkit-transition: all .5s;
@@ -148,13 +148,13 @@ svg .node text {
   transition: all .5s;
 }
 
-svg .link {
+#d3-graph svg .link {
   stroke: #222;
   stroke-width: 1;
   stroke-opacity: .3;
 }
 
-svg .link-active {
+#d3-graph svg .link-active {
   stroke: #000;
   stroke-width: 2;
   stroke-opacity: 1;
