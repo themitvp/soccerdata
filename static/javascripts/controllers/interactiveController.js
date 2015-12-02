@@ -1,9 +1,9 @@
-app.controller('networkController', function ($scope, $http, $location, $routeSegment, Page, socialnetworkService) {
+app.controller('interactiveController', function ($scope, $http, $location, $routeSegment, Page, socialnetworkService) {
     $scope.Page = Page;
     $scope.$routeSegment = $routeSegment;
     $scope.selectednode = "test";
 
-    Page.setTitle('Network Graph');
+    Page.setTitle('Interactive Network Graph');
 
     $scope.init = function() {
         $scope.nodes = [];

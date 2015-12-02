@@ -1,9 +1,9 @@
-app.controller('classifierController', function ($scope, $http, $location, $routeSegment, Page, classifierService) {
+app.controller('wikiController', function ($scope, $http, $location, $routeSegment, Page, classifierService) {
     $scope.Page = Page;
     $scope.$routeSegment = $routeSegment;
     
 
-    Page.setTitle('Classifier');
+    Page.setTitle('Wikipedia Pages');
 
     $scope.init = function() {
         $scope.testdata = "";

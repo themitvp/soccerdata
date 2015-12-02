@@ -33,29 +33,110 @@ app.config(function ($routeSegmentProvider, $locationProvider, $routeProvider) {
 
     $routeSegmentProvider
 
-        .when('/', 'socialnetwork')
+        .when('/', 'home')
+
         .when('/network', 'network')
-        .when('/classifier', 'classifier')
-        .when('/about', 'about')
-        //.when('/overview/:dataSetId', 'overview')
+        .when('/network/degree', 'network.degree')
+        .when('/network/playerindex', 'network.playerindex')
+        .when('/network/influential', 'network.influential')
+        .when('/network/loyal', 'network.loyal')
+        .when('/network/paradox', 'network.paradox')
+        .when('/network/communities', 'network.communities')
+        .when('/network/interactive', 'network.interactive')
+
+        .when('/wiki', 'wiki')
+        .when('/wiki/playerposition', 'playerposition')
+        .when('/wiki/marketvalue', 'marketvalue')
+        .when('/wiki/wordcloud', 'wordcloud')
+        
+        .when('/transfers', 'transfers')
+
         .otherwise('/')
 
-        .segment('socialnetwork', {
+        .segment('home', {
+            default: true,
+            templateUrl: '/static/templates/home/home.html?1',
+            controller: 'homeController'
+        })
+
+        .segment('network', {
+            templateUrl: '/static/templates/socialnetwork/network.html?1'
+        })
+
+        .within()
+
+        .segment('networkhome', {
             default: true,
             templateUrl: '/static/templates/socialnetwork/socialnetwork.html?1',
-            controller: 'socialnetworkController'
+            controller: 'socialnetworkController',
+            resolve: resolve
         })
-        .segment('network', {
-            templateUrl: '/static/templates/socialnetwork/d3graph.html?1',
-            controller: 'networkController'
+
+        .segment('degree', {
+            templateUrl: '/static/templates/socialnetwork/degree.html?1',
+            controller: 'degreeController',
+            resolve: resolve
         })
-        .segment('classifier', {
-            templateUrl: '/static/templates/classifier/classifier.html?1',
-            controller: 'classifierController'
+        .segment('playerindex', {
+            templateUrl: '/static/templates/socialnetwork/playerindex.html?1',
+            controller: 'playerindexController',
+            resolve: resolve
         })
-        .segment('about', {
-            templateUrl: '/static/templates/about/about.html?1',
-            controller: 'aboutController'
+        .segment('influential', {
+            templateUrl: '/static/templates/socialnetwork/influential.html?1',
+            controller: 'influentialController',
+            resolve: resolve
+        })
+        .segment('loyal', {
+            templateUrl: '/static/templates/socialnetwork/loyal.html?1',
+            controller: 'loyalController',
+            resolve: resolve
+        })
+        .segment('paradox', {
+            templateUrl: '/static/templates/socialnetwork/paradox.html?1',
+            controller: 'paradoxController',
+            resolve: resolve
+        })
+        .segment('communities', {
+            templateUrl: '/static/templates/socialnetwork/communities.html?1',
+            controller: 'communitiesController',
+            resolve: resolve
+        })
+        .segment('interactive', {
+            templateUrl: '/static/templates/socialnetwork/interactive.html?1',
+            controller: 'interactiveController',
+            resolve: resolve
+        })
+
+        .up()
+
+        .segment('wiki', {
+            templateUrl: '/static/templates/classifier/wiki.html?1',
+            controller: 'wikiController'
+        })
+
+        .within()
+
+        .segment('playerposition', {
+            templateUrl: '/static/templates/classifier/playerposition.html?1',
+            controller: 'playerpositionController'
+        })
+
+        .segment('marketvalue', {
+            templateUrl: '/static/templates/classifier/marketvalue.html?1',
+            controller: 'marketvalueController'
+        })
+
+        .segment('wordcloud', {
+            templateUrl: '/static/templates/classifier/wordcloud.html?1',
+            controller: 'wordcloudController'
+        })
+
+        .up()
+
+        .segment('transfers', {
+            templateUrl: '/static/templates/classifier/transfers.html?1',
+            controller: 'transfersController'
         });
 });
 

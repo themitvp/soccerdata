@@ -1,16 +1,52 @@
 <div class="col-sm-3 col-md-2 sidebar">
 	<ul class="nav nav-sidebar">
 		<li ng-class="{ active: isActive('/')}">
-			<a href="/">Dashboard</a>
+			<a href="/">Home</a>
 		</li>
 		<li ng-class="{ active: isActive('/network')}">
-			<a href="/network">Network Graph</a>
+			<a href="/network">Social Network</a>
+
+			<ul class="nav nav-sidebar-sub">
+				<li ng-class="{ active: isActive('/network/degree')}">
+					<a href="/network/degree">Degree Distribution</a>
+				</li>
+				<li ng-class="{ active: isActive('/network/playerindex')}">
+					<a href="/network/playerindex">The Player Index</a>
+				</li>
+				<li ng-class="{ active: isActive('/network/influential')}">
+					<a href="/network/influential">Most Influential Players</a>
+				</li>
+				<li ng-class="{ active: isActive('/network/loyal')}">
+					<a href="/network/loyal">Old Players are more Loyal</a>
+				</li>
+				<li ng-class="{ active: isActive('/network/paradox')}">
+					<a href="/network/paradox">Friendship Paradox</a>
+				</li>
+				<li ng-class="{ active: isActive('/network/communities')}">
+					<a href="/network/communities">Communities</a>
+				</li>
+				<li ng-class="{ active: isActive('/network/interactive')}">
+					<a href="/network/interactive">Interactive Graph</a>
+				</li>
+			</ul>
 		</li>
-		<li ng-class="{ active: isActive('/classifier')}">
-			<a href="/classifier">Classifier</a>
+		<li ng-class="{ active: isActive('/wiki')}">
+			<a href="/wiki">Wikipedia Pages</a>
+
+			<ul class="nav nav-sidebar-sub">
+				<li ng-class="{ active: isActive('/wiki/playerposition')}">
+					<a href="/wiki/playerposition">Player Position Classifier</a>
+				</li>
+				<li ng-class="{ active: isActive('/wiki/marketvalue')}">
+					<a href="/wiki/marketvalue">Market Value Classifier</a>
+				</li>
+				<li ng-class="{ active: isActive('/wiki/wordcloud')}">
+					<a href="/wiki/wordcloud">WordCloud</a>
+				</li>
+			</ul>
 		</li>
-		<li ng-class="{ active: isActive('/about')}">
-			<a href="/about">About The Project</a>
+		<li ng-class="{ active: isActive('/transfers')}">
+			<a href="/transfers">Best Transfers</a>
 		</li>
 	</ul>
 </div>
