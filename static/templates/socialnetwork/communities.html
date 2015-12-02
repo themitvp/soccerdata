@@ -1,0 +1,7 @@
+<h1 class="page-header">Communities</h1>
+
+<table ng-table-dynamic="tableParams with tableCols" class="table table-striped table-responsive">
+	<tr ng-repeat="row in $data">
+		<td ng-repeat="col in $columns" ng-class="getColor(row[col.field])">{{row[col.field]}}</td>
+	</tr>
+</table>

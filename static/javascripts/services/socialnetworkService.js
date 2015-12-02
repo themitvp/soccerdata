@@ -9,5 +9,11 @@ app.service('socialnetworkService', ['$resource',
 				this.nodelinks = data['links'];
 			}.bind(this));
 		};
+
+		this.getCommunities = function() {
+			return $resource('api/v1/communities/').query().$promise.then(function(data) {
+				return data;
+			}.bind(this));
+		};
 	}
 	]);

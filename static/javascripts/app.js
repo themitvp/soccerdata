@@ -1,4 +1,4 @@
-var app = angular.module('soccerApp', ['ngRoute', 'route-segment', 'view-segment', 'ngAnimate', 'ui.bootstrap', 'ngResource', 'angular-loading-bar']);
+var app = angular.module('soccerApp', ['ngRoute', 'route-segment', 'view-segment', 'ngAnimate', 'ui.bootstrap', 'ngResource', 'angular-loading-bar', 'ngTable']);
 
 var resolve = {
     delay: function ($q, $timeout) {
