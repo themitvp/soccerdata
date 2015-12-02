@@ -171,23 +171,6 @@ app.config(function ($routeSegmentProvider, $locationProvider, $routeProvider) {
         .up();
 });
 
-app.run(function ($rootScope, $window) {
-    // publish current transition direction on rootScope
-    $rootScope.direction = 'left';
-    // listen change start events
-    $rootScope.$on('$routeChangeStart', function (event, next, current) {
-        $rootScope.direction = 'right';
-        // console.log(arguments);
-        if (current && next && (current.depth > next.depth)) {
-            $rootScope.direction = 'left';
-        }
-        // back
-        $rootScope.back = function () {
-            $window.history.back();
-        };
-    });
-});
-
 // Keep trailing slash when fetching from API
 app.config(function($resourceProvider) {
     $resourceProvider.defaults.stripTrailingSlashes = false;
