@@ -150,7 +150,7 @@ app.directive('networkGraph', function (){
    }
    return {
       link: link,
-      restrict: 'AE',
+      restrict: 'E',
       scope: {
          nodes: '=',
          nodelinks: '='
