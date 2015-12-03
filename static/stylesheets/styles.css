@@ -11,6 +11,12 @@ img {
   max-width: 500px;
 }
 
+.navbar-brand .logo {
+  height: 100%;
+  display: inline-block;
+  padding-right: 10px;
+}
+
 /*
  * Global add-ons
  */
