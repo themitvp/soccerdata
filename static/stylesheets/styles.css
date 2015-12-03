@@ -68,6 +68,20 @@ img {
   padding-right: 20px;
   padding-left: 20px;
 }
+
+.nav li a {
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+.nav > .top-active > a,
+.nav > .top-active > a:hover,
+.nav > .top-active > a:focus {
+  color: #fff;
+  background-color: #82A6C5;
+}
 .nav > .active > a,
 .nav > .active > a:hover,
 .nav > .active > a:focus {

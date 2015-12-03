@@ -1,58 +1,58 @@
 <div class="col-sm-3 col-md-2 sidebar">
 	<ul class="nav nav-sidebar">
-		<li ng-class="{ active: isActive('/')}">
+		<li ng-class="{ 'active': isActive('/')}">
 			<a href="/">Home</a>
 		</li>
-		<li ng-class="{ active: isActive('/network')}">
+		<li ng-class="{ 'active': isActive('/network'), 'top-active': $routeSegment.startsWith('network')}">
 			<a href="/network">Social Network</a>
 
 			<ul class="nav nav-sidebar-sub">
-				<li ng-class="{ active: isActive('/network/degree')}">
+				<li ng-class="{ 'active': isActive('/network/degree')}">
 					<a href="/network/degree">Degree Distribution</a>
 				</li>
-				<li ng-class="{ active: isActive('/network/playerindex')}">
+				<li ng-class="{ 'active': isActive('/network/playerindex')}">
 					<a href="/network/playerindex">The Player Index</a>
 				</li>
-				<li ng-class="{ active: isActive('/network/influential')}">
+				<li ng-class="{ 'active': isActive('/network/influential')}">
 					<a href="/network/influential">Most Influential Players</a>
 				</li>
-				<li ng-class="{ active: isActive('/network/loyal')}">
+				<li ng-class="{ 'active': isActive('/network/loyal')}">
 					<a href="/network/loyal">Old Players Are More Loyal</a>
 				</li>
-				<li ng-class="{ active: isActive('/network/paradox')}">
+				<li ng-class="{ 'active': isActive('/network/paradox')}">
 					<a href="/network/paradox">Friendship Paradox</a>
 				</li>
-				<li ng-class="{ active: isActive('/network/communities')}">
+				<li ng-class="{ 'active': isActive('/network/communities')}">
 					<a href="/network/communities">Communities</a>
 				</li>
-				<li ng-class="{ active: isActive('/network/interactive')}">
+				<li ng-class="{ 'active': isActive('/network/interactive)}">
 					<a href="/network/interactive">Interactive Graph</a>
 				</li>
 			</ul>
 		</li>
-		<li ng-class="{ active: isActive('/wiki')}">
+		<li ng-class="{ 'active': isActive('/wiki'), 'top-active': $routeSegment.startsWith('wiki')}">
 			<a href="/wiki">Wikipedia Pages</a>
 
 			<ul class="nav nav-sidebar-sub">
-				<li ng-class="{ active: isActive('/wiki/playerposition')}">
+				<li ng-class="{ 'active': isActive('/wiki/playerposition')}">
 					<a href="/wiki/playerposition">Player Position Classifier</a>
 				</li>
-				<li ng-class="{ active: isActive('/wiki/marketvalue')}">
+				<li ng-class="{ 'active': isActive('/wiki/marketvalue')}">
 					<a href="/wiki/marketvalue">Market Value Classifier</a>
 				</li>
-				<li ng-class="{ active: isActive('/wiki/wordcloud')}">
+				<li ng-class="{ 'active': isActive('/wiki/wordcloud')}">
 					<a href="/wiki/wordcloud">WordCloud</a>
 				</li>
 			</ul>
 		</li>
-		<li ng-class="{ active: isActive('/extrafun')}">
+		<li ng-class="{ 'active': isActive('/extrafun'), 'top-active': $routeSegment.startsWith('extrafun')}">
 			<a href="/extrafun">Extra Fun</a>
 
 			<ul class="nav nav-sidebar-sub">
-				<li ng-class="{ active: isActive('/extrafun/transfers')}">
+				<li ng-class="{ 'active': isActive('/extrafun/transfers')}">
 					<a href="/extrafun/transfers">Best Transfers</a>
 				</li>
-				<li ng-class="{ active: isActive('/extrafun/italy')}">
+				<li ng-class="{ 'active': isActive('/extrafun/italy')}">
 					<a href="/extrafun/italy">Italy</a>
 				</li>
 			</ul>
