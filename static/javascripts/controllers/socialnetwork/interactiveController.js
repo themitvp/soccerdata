@@ -3,7 +3,7 @@ app.controller('interactiveController', function ($scope, $http, $location, $rou
     $scope.$routeSegment = $routeSegment;
     $scope.selectednode = "test";
 
-    Page.setTitle('Interactive Network Graph');
+    Page.setTitle('Interactive Graph');
 
     $scope.init = function() {
         $scope.nodes = [];
