@@ -10,6 +10,7 @@ class NodeSerializer(serializers.ModelSerializer):
             'id',
             'name',
             'current_team',
+            'current_team_id',
             'position',
             'marketvalue',
             'age')
@@ -23,4 +24,5 @@ class LinkSerializer(serializers.ModelSerializer):
             'source',
             'target',
             'current_team',
+            'current_team_id',
             'value')
