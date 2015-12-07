@@ -1,10 +1,90 @@
 <nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/">
-      	<img alt="Brand" class="logo" src="static/images/favicon.png">
-      	Soccer Data
-      </a>
-    </div>
-  </div>
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="/">
+				<img alt="Brand" class="logo" src="static/images/favicon.png">
+				Soccer Data
+			</a>
+		</div>
+
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li ng-class="{ 'active': isActive('/')}">
+					<a href="/">Home</a>
+				</li>
+				<li class="dropdown" ng-class="{ 'active': $routeSegment.startsWith('network')}">
+					<a href="/network">Social Network <span class="caret"></span></a>
+
+					<ul class="dropdown-menu">
+						<li ng-class="{ 'active': isActive('/network')}">
+							<a href="/network">Introduction</a>
+						</li>
+						<li role="separator" class="divider"></li>
+						<li ng-class="{ 'active': isActive('/network/degree')}">
+							<a href="/network/degree">Degree Distribution</a>
+						</li>
+						<li ng-class="{ 'active': isActive('/network/playerindex')}">
+							<a href="/network/playerindex">Lord Bendtner Index</a>
+						</li>
+						<li ng-class="{ 'active': isActive('/network/influential')}">
+							<a href="/network/influential">Most Influential Players</a>
+						</li>
+						<li ng-class="{ 'active': isActive('/network/loyal')}">
+							<a href="/network/loyal">Old Players Are More Loyal</a>
+						</li>
+						<li ng-class="{ 'active': isActive('/network/paradox')}">
+							<a href="/network/paradox">Friendship Paradox</a>
+						</li>
+						<li ng-class="{ 'active': isActive('/network/communities')}">
+							<a href="/network/communities">Communities</a>
+						</li>
+						<li ng-class="{ 'active': isActive('/network/interactive')}">
+							<a href="/network/interactive">Interactive Graph</a>
+						</li>
+					</ul>
+				</li>
+				<li class="dropdown" ng-class="{ 'active': $routeSegment.startsWith('wiki')}">
+					<a href="/wiki">Wikipedia Pages <span class="caret"></span></a>
+
+					<ul class="dropdown-menu">
+						<li ng-class="{ 'active': isActive('/wiki')}">
+							<a href="/wiki">Introduction</a>
+						</li>
+						<li role="separator" class="divider"></li>
+						<li ng-class="{ 'active': isActive('/wiki/playerposition')}">
+							<a href="/wiki/playerposition">Player Position Classifier</a>
+						</li>
+						<li ng-class="{ 'active': isActive('/wiki/marketvalue')}">
+							<a href="/wiki/marketvalue">Market Value Classifier</a>
+						</li>
+						<li ng-class="{ 'active': isActive('/wiki/wordcloud')}">
+							<a href="/wiki/wordcloud">WordCloud</a>
+						</li>
+					</ul>
+				</li>
+				<li class="dropdown" ng-class="{ 'active': $routeSegment.startsWith('extrafun')}">
+					<a href="/extrafun">Extra Fun <span class="caret"></span></a>
+
+					<ul class="dropdown-menu">
+						<li ng-class="{ 'active': isActive('/extrafun')}">
+							<a href="/extrafun">Introduction</a>
+						</li>
+						<li role="separator" class="divider"></li>
+						<li ng-class="{ 'active': isActive('/extrafun/transfers')}">
+							<a href="/extrafun/transfers">Best Transfers</a>
+						</li>
+						<li ng-class="{ 'active': isActive('/extrafun/italy')}">
+							<a href="/extrafun/italy">Italy</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
 </nav>
