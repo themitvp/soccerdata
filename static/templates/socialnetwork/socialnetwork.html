@@ -2,62 +2,61 @@
 
 <div class="row">
 	<div class="col-sm-12">
-		<img src="static/images/network.png">
 		<p>
-			A network graph of the soccer players, who have at some point played together, has been created. With the network graph it is possible to investigate the data about soccer players more efficently.
+			This section will address the social network of soccer players. It will explain the structure of the network and a brief description of each network analyse.
 		</p>
-		
 		<p>
-			The network was created with the following attributes:
+			The network consists of the soccer players and links between them if they have played together in their careers. This makes it possible to investigate the impact of the soccer players on the network and their relations. 
 		</p>
+		<p>
+			The following attributes describes the nodes and links in the network:
+		</p>
+		<strong>Nodes:</strong> Soccer players
 		<ul>
-			<li>
-				<strong>Nodes:</strong> Soccer players
-				<ul>
-					<li><strong>Attribute:</strong> Name</li>
-					<li><strong>Attribute:</strong> Age</li>
-					<li><strong>Attribute:</strong> Current Team</li>
-					<li><strong>Attribute:</strong> Market Value</li>
-				</ul>
-			</li>
-			<li>
-				<strong>Links:</strong> A link is esablished between two soccer players if they have played on the same team
-				<ul>
-					<li><strong>Attribute:</strong> Team</li>
-				</ul>
-			</li>
+			<li><strong>Attribute:</strong> Name</li>
+			<li><strong>Attribute:</strong> Age</li>
+			<li><strong>Attribute:</strong> Current Team</li>
+			<li><strong>Attribute:</strong> Market Value</li>
 		</ul>
+		<strong>Links:</strong> A link is established between two soccer players if they have played on the same team
+		<ul>
+			<li><strong>Attribute:</strong> Team</li>
+		</ul>
+		
 
-		<p>Based on the created network, different areas have been analysed. </p>
+
+		<img src="static/images/network.png">
+
+		<h3>Based on the defined network, different areas were analysed.</h3>
 
 		<div class="list-group">
 			<a href="network/degree" class="list-group-item">
 				<h4 class="list-group-item-heading">Degree Distribution</h4>
-				<p class="list-group-item-text">The degree distribution is analysed in order to find out how the number of links is distributed across the soccer players</p>
+				<p class="list-group-item-text">The degree distribution was calculated to find out how the number of links are distributed across the soccer players.</p>
 			</a>
-			<a href="#" class="list-group-item">
-				<h4 class="list-group-item-heading">The Player Index</h4>
-				<p class="list-group-item-text">How many players are there from one player to another? Does the six degrees of separation occur in a soccer player network?</p>
+			<a href="network/playerindex" class="list-group-item">
+				<h4 class="list-group-item-heading">Lord Bendtner Index</h4>
+				<p class="list-group-item-text">How many links are there from Lord Bendtner to other soccer players? Does the six degrees of separation occur in the soccer player network?</p>
 			</a>
-			<a href="#" class="list-group-item">
+			<a href="network/influential" class="list-group-item">
 				<h4 class="list-group-item-heading">Most Influential Players</h4>
-				<p class="list-group-item-text">Which players links the network together?</p>
+				<p class="list-group-item-text">Which players link the network together?</p>
 			</a>
-			<a href="#" class="list-group-item">
-				<h4 class="list-group-item-heading">Old Players are more Loyal</h4>
-				<p class="list-group-item-text">One might think that in the good old days soccer players were more loyal to their club hence they did not change clubs at often. The network was investigated based on the age of the soccer player to prove the hypothesis right or wrong.</p>
+			<a href="network/loyal" class="list-group-item">
+				<h4 class="list-group-item-heading">Old Players Are More Loyal</h4>
+				<p class="list-group-item-text">One might think that in the good old days soccer players were more loyal and did not change clubs so often. The network was investigated based on the age of the soccer players to confirm or deny the hypothesis.</p>
 			</a>
-			<a href="#" class="list-group-item">
+			<a href="network/paradox" class="list-group-item">
 				<h4 class="list-group-item-heading">Friendship Paradox</h4>
-				<p class="list-group-item-text">Does the well known network friendship paradox occur in the soccer player network: does the soccer players have fewer links than the other soccers player they are linked to, on average. Furthermore, is the average market value for a soccer player's linked connections higher than his own market value?</p>
+				<p class="list-group-item-text">Does the well-known network friendship paradox occur in the soccer player network? Do soccer players on average have fewer links than their linked soccer players? Furthermore, is a soccer player’s market value lower than the average of the linked soccer players’ market value?</p>
 			</a>
-			<a href="#" class="list-group-item">
+			<a href="network/communities" class="list-group-item">
 				<h4 class="list-group-item-heading">Communities</h4>
-				<p class="list-group-item-text">Do the deduced communities correspond with the nationality and do communities overlap?</p>
+				<p class="list-group-item-text">Do the deduced communities correspond with nationality and do communities overlap?</p>
 			</a>
-			<a href="#" class="list-group-item">
+			<a href="network/interactive" class="list-group-item">
 				<h4 class="list-group-item-heading">Interactive Graph</h4>
-				<p class="list-group-item-text">A small part of the soccer player network has been extracted and used to create an interactive graph.</p>
+				<p class="list-group-item-text">An interactive graph that shows a small part of the soccer player network.</p>
 			</a>
 		</div>
 	</div>
