@@ -2,5 +2,5 @@ app.controller('italyController', function ($scope, $http, $location, $routeSegm
     $scope.Page = Page;
     $scope.$routeSegment = $routeSegment;
     
-    Page.setTitle('Italy');
+    Page.setTitle('Is Italian Soccer Boring?');
 });
