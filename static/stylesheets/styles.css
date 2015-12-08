@@ -260,6 +260,8 @@ svg.wordcloud {
   display:block;
 }
 
-ul.nav li.dropdown:hover ul.dropdown-menu {
-  display: block;
+@media all and (min-width : 768px) {
+  ul.nav li.dropdown:hover ul.dropdown-menu {
+    display: block;
+  }  
 }

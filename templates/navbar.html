@@ -19,8 +19,7 @@
 					<a href="/">Home</a>
 				</li>
 				<li class="dropdown" ng-class="{ 'active': $routeSegment.startsWith('network')}">
-					<a href="/network">Social Network <span class="caret"></span></a>
-
+					<a href="/network" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Social Network <span class="caret"></span></a>
 					<ul class="dropdown-menu">
 						<li ng-class="{ 'active': isActive('/network')}">
 							<a href="/network">Introduction</a>
@@ -50,7 +49,7 @@
 					</ul>
 				</li>
 				<li class="dropdown" ng-class="{ 'active': $routeSegment.startsWith('wiki')}">
-					<a href="/wiki">Wikipedia Pages <span class="caret"></span></a>
+					<a href="/wiki" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Wikipedia Pages <span class="caret"></span></a>
 
 					<ul class="dropdown-menu">
 						<li ng-class="{ 'active': isActive('/wiki')}">
@@ -69,7 +68,7 @@
 					</ul>
 				</li>
 				<li class="dropdown" ng-class="{ 'active': $routeSegment.startsWith('extrafun')}">
-					<a href="/extrafun">Extra Fun <span class="caret"></span></a>
+					<a href="/extrafun" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Extra Fun <span class="caret"></span></a>
 
 					<ul class="dropdown-menu">
 						<li ng-class="{ 'active': isActive('/extrafun')}">
