@@ -15,14 +15,14 @@
 		<p>
 			Specifically, <strong>22</strong> communities were identified, as is shown in the graph below:
 		</p>
-		<img src="static/images/communities.png">
+		<img class="img-responsive center-block"  src="static/images/communities.png">
 		<p>
 			Each color represents a different community. At some points, communities are shown as not completely separated, as they often overlap to a certain extent.
 		</p>
 		<p>
 			To allow further examinations, the nodes remain fixed in their position but the colors now stand for different countries. The graph below thus reflects whether countries correspond to communities.
 		</p>
-		<img src="static/images/communities_country.png">
+		<img class="img-responsive center-block"  src="static/images/communities_country.png">
 		
 		<p>
 			The table below was designed to facilitate more in-depth analysis. It illustrates the correspondence between communities and nationalities. 
@@ -75,6 +75,7 @@
 
 			<li><strong>Community 22:</strong> Poland. Very few other players. Almost all from Poland is in this community.</li>
 		</ul>
+		<h3>Result</h3>
 		<table ng-table-dynamic="tableParams with tableCols" class="table table-striped table-responsive">
 			<tr ng-repeat="row in $data">
 				<td ng-repeat="col in $columns" ng-class="getColor(row[col.field])">{{row[col.field]}}</td>
