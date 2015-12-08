@@ -7,7 +7,7 @@ app.directive('networkGraph', function (){
       width = el.clientWidth,
       height = window.innerHeight - el_rect.bottom,
       circle_dia = 7;
-console.log("test",el_rect.bottom);
+      
       tooltip = Tooltip("vis-tooltip", 230);
 
       var zoom = d3.behavior.zoom()
