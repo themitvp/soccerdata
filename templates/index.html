@@ -8,24 +8,30 @@
 	<!--[if IE]><link rel="shortcut icon" href="static/images/favicon.ico"><![endif]-->
 	<link rel="icon" href="static/images/favicon.png">
 
-  	{% include 'stylesheets.html' %}
+	{% include 'stylesheets.html' %}
 </head>
 
 <body>
 	{% include 'navbar.html' %}
 
 	<div class="container">
-	    <div class="row">
-	    	
-	     	<!--<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main ng-cloak">-->
-	     	<div class="col-sm-12 main ng-cloak">
-	     		<!-- angular templating -->
-		        <!-- this is where content will be injected -->
-		        <div app-view-segment="0" class="row anim"></div>
-	     	</div>
-	    </div>
-  	</div>
+		<div class="row">
 
-  	{% include 'javascripts.html' %}
+
+			<!--<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main ng-cloak">-->
+			<div class="col-sm-12 main ng-cloak">
+				<div class="row">
+					<div class="page-header">
+						<h1 ng-bind="Page.header()"></h1>
+					</div>
+				</div>
+				<!-- angular templating -->
+				<!-- this is where content will be injected -->
+				<div app-view-segment="0" class="row anim"></div>
+			</div>
+		</div>
+	</div>
+
+	{% include 'javascripts.html' %}
 </body>
 </html>

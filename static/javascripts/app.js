@@ -10,12 +10,17 @@ var resolve = {
 
 app.factory('Page', function () {
     var title = 'Soccer Data';
+    var header = '';
     return {
         title: function () {
             return title;
         },
         setTitle: function (newTitle) {
             title = newTitle + " | Soccer Data";
+            header = newTitle;
+        },
+        header: function () {
+            return header;
         }
     };
 });

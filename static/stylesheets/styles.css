@@ -4,10 +4,10 @@
 
  html {
   overflow-y:scroll;
- }
+}
 
- /* Move down content because we have a fixed navbar that is 50px tall */
- body {
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
   padding-top: 50px;
 }
 
@@ -15,10 +15,14 @@ img {
   max-width: 500px;
 }
 
+.navbar-brand {
+  padding: 13.5px 15px 12.5px;
+}
+
 .navbar-brand .logo {
+  display: inline;
+  margin: 0 10px;
   height: 100%;
-  display: inline-block;
-  padding-right: 10px;
 }
 
 /*
@@ -258,5 +262,5 @@ svg.wordcloud {
 }
 
 ul.nav li.dropdown:hover ul.dropdown-menu {
-    display: block;
+  display: block;
 }
