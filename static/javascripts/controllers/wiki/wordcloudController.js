@@ -2,5 +2,5 @@ app.controller('wordcloudController', function ($scope, $http, $location, $route
     $scope.Page = Page;
     $scope.$routeSegment = $routeSegment;
     
-    Page.setTitle('WordCloud');
+    Page.setTitle('Word Cloud');
 });
