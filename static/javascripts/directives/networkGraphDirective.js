@@ -3,10 +3,11 @@ app.directive('networkGraph', function (){
       var color = d3.scale.category20();
 
       var el = element[0],
+      el_rect = el.getBoundingClientRect(),
       width = el.clientWidth,
-      height = $('.sidebar').height() - $('.page-header').outerHeight() - $('.page-header').position().top,
+      height = window.innerHeight - el_rect.bottom,
       circle_dia = 7;
-
+console.log("test",el_rect.bottom);
       tooltip = Tooltip("vis-tooltip", 230);
 
       var zoom = d3.behavior.zoom()
@@ -143,7 +144,7 @@ app.directive('networkGraph', function (){
 
       function resize() {
          width = el.clientWidth;
-         height = $('.sidebar').height() - $('.page-header').outerHeight() - $('.page-header').position().top;
+         height = window.innerHeight - el_rect.bottom;
          svg.attr("width", width).attr("height", height);
          force.size([width, height]).resume();
       }
