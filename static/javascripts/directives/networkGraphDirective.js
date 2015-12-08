@@ -1,5 +1,6 @@
 app.directive('networkGraph', function (){
    function link($scope, element) {
+      console.log(d3.range());
       var color = d3.scale.category20();
 
       var el = element[0],
@@ -62,8 +63,8 @@ app.directive('networkGraph', function (){
       .call(force.drag().on("dragstart", dragstart));
 
       node.append('circle')
-      .attr('r', circle_dia)
-      .style('fill', function(d) { return color(d.age); });
+      .attr('r', function(d) { return d.weight + circle_dia; })
+      .style('fill', function(d) { return color(d.current_team_id); });
 
       var linkedByIndex = {};
       edges.forEach(function(d) {
@@ -75,9 +76,15 @@ app.directive('networkGraph', function (){
       }
 
       node.on("mouseover", function(d) {
-         content = '<p class="main">Name: ' + d.name + '</span></p>';
+         content = '<p class="main"><strong>Name:</strong> ' + d.name + '</p>';
          content += '<hr class="tooltip-hr">';
-         content += '<p class="main">Age: ' + d.age + '</span></p>';
+         content += '<p class="main">';
+         content += '<strong>Team:</strong> ' + d.current_team + '<br>';
+         content += '<strong>Position:</strong> ' + d.position + '<br>';
+         content += '<strong>Age:</strong> ' + d.age + '<br>';
+         content += '<strong>Market Value:</strong> ' + d.marketvalue + '<br>';
+         content += '<strong>Connections:</strong> ' + d.weight + '<br>';
+         content += '</p>';
          tooltip.showTooltip(content,d3.event);
 
          d3.select(this).select('text')
@@ -97,7 +104,7 @@ app.directive('networkGraph', function (){
          d3.select(this).classed("node-active", true);
          d3.select(this).select("circle").transition()
          .duration(750)
-         .attr("r", circle_dia*2);
+         .attr("r", function(d) { return d.weight + circle_dia * 2; });
 
       })
       .on("mousedown", function(d) {
@@ -114,7 +121,7 @@ app.directive('networkGraph', function (){
 
          d3.select(this).select("circle").transition()
          .duration(750)
-         .attr("r", circle_dia);
+         .attr("r", function(d) { return d.weight + circle_dia; });
       });
 
       node.append("text")
