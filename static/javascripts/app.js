@@ -62,55 +62,55 @@ app.config(function ($routeSegmentProvider, $locationProvider, $routeProvider) {
 
         .segment('home', {
             default: true,
-            templateUrl: '/static/templates/home/home.html?1',
+            templateUrl: '/static/templates/home/home.html?2',
             controller: 'homeController'
         })
 
         .segment('network', {
-            templateUrl: '/static/templates/socialnetwork/network.html?1'
+            templateUrl: '/static/templates/socialnetwork/network.html?2'
         })
 
         .within()
 
         .segment('networkhome', {
             default: true,
-            templateUrl: '/static/templates/socialnetwork/socialnetwork.html?1',
+            templateUrl: '/static/templates/socialnetwork/socialnetwork.html?2',
             controller: 'socialnetworkController',
             resolve: resolve
         })
 
         .segment('degree', {
-            templateUrl: '/static/templates/socialnetwork/degree.html?1',
+            templateUrl: '/static/templates/socialnetwork/degree.html?2',
             controller: 'degreeController',
             resolve: resolve
         })
         .segment('playerindex', {
-            templateUrl: '/static/templates/socialnetwork/playerindex.html?1',
+            templateUrl: '/static/templates/socialnetwork/playerindex.html?2',
             controller: 'playerindexController',
             resolve: resolve
         })
         .segment('influential', {
-            templateUrl: '/static/templates/socialnetwork/influential.html?1',
+            templateUrl: '/static/templates/socialnetwork/influential.html?2',
             controller: 'influentialController',
             resolve: resolve
         })
         .segment('loyal', {
-            templateUrl: '/static/templates/socialnetwork/loyal.html?1',
+            templateUrl: '/static/templates/socialnetwork/loyal.html?2',
             controller: 'loyalController',
             resolve: resolve
         })
         .segment('paradox', {
-            templateUrl: '/static/templates/socialnetwork/paradox.html?1',
+            templateUrl: '/static/templates/socialnetwork/paradox.html?2',
             controller: 'paradoxController',
             resolve: resolve
         })
         .segment('communities', {
-            templateUrl: '/static/templates/socialnetwork/communities.html?1',
+            templateUrl: '/static/templates/socialnetwork/communities.html?2',
             controller: 'communitiesController',
             resolve: resolve
         })
         .segment('interactive', {
-            templateUrl: '/static/templates/socialnetwork/interactive.html?1',
+            templateUrl: '/static/templates/socialnetwork/interactive.html?2',
             controller: 'interactiveController',
             resolve: resolve
         })
@@ -118,32 +118,32 @@ app.config(function ($routeSegmentProvider, $locationProvider, $routeProvider) {
         .up()
 
         .segment('wiki', {
-            templateUrl: '/static/templates/wiki/wiki.html?1'
+            templateUrl: '/static/templates/wiki/wiki.html?2'
         })
 
         .within()
 
         .segment('wikipages', {
             default: true,
-            templateUrl: '/static/templates/wiki/wikipages.html?1',
+            templateUrl: '/static/templates/wiki/wikipages.html?2',
             controller: 'wikiController',
             resolve: resolve
         })
 
         .segment('playerposition', {
-            templateUrl: '/static/templates/wiki/playerposition.html?1',
+            templateUrl: '/static/templates/wiki/playerposition.html?2',
             controller: 'playerpositionController',
             resolve: resolve
         })
 
         .segment('marketvalue', {
-            templateUrl: '/static/templates/wiki/marketvalue.html?1',
+            templateUrl: '/static/templates/wiki/marketvalue.html?2',
             controller: 'marketvalueController',
             resolve: resolve
         })
 
         .segment('wordcloud', {
-            templateUrl: '/static/templates/wiki/wordcloud.html?1',
+            templateUrl: '/static/templates/wiki/wordcloud.html?2',
             controller: 'wordcloudController',
             resolve: resolve
         })
@@ -151,24 +151,24 @@ app.config(function ($routeSegmentProvider, $locationProvider, $routeProvider) {
         .up()
 
         .segment('extrafun', {
-            templateUrl: '/static/templates/extra/extra.html?1'
+            templateUrl: '/static/templates/extra/extra.html?2'
         })
 
         .within()
 
         .segment('extrafuntext', {
             default: true,
-            templateUrl: '/static/templates/extra/fun.html?1',
+            templateUrl: '/static/templates/extra/fun.html?2',
             controller: 'extrafunController',
             resolve: resolve
         })
         .segment('transfers', {
-            templateUrl: '/static/templates/extra/transfers.html?1',
+            templateUrl: '/static/templates/extra/transfers.html?2',
             controller: 'transfersController',
             resolve: resolve
         })
         .segment('italy', {
-            templateUrl: '/static/templates/extra/italy.html?1',
+            templateUrl: '/static/templates/extra/italy.html?2',
             controller: 'italyController',
             resolve: resolve
         })
