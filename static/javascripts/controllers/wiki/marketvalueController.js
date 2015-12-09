@@ -2,5 +2,5 @@ app.controller('marketvalueController', function ($scope, $http, $location, $rou
     $scope.Page = Page;
     $scope.$routeSegment = $routeSegment;
     
-    Page.setTitle('Market Value');
+    Page.setTitle('Market Value Classifier');
 });

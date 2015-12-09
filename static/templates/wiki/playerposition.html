@@ -1,14 +1,21 @@
 <div class="row">
 	<div class="col-sm-12">
 		<p>
-			This section will investigate whether a classifier can trained to predict soccer players’ position on field by only using the their Wikipedia page. 
+			This section will investigate whether a classifier can be trained to predict a soccer players' position on field by only using their Wikipedia page. 
 		</p>
 		<p>
-			The massive Wikipedia corpus of the soccer players’ pages have been tokenized, stemmed and narrowed down to a bag-of-words, which was used to train the classifier. Additionally, a training set of the corpus labelled with the correct positions was used to further train the classifier.
+			The massive Wikipedia corpus of the soccer players' pages has been tokenized, stemmed and narrowed down to a bag-of-words, which was used to train the classifier. Additionally, a training set of the corpus labelled with the correct positions was used to further train the classifier.
 		</p>
 		<p>
-			The classifier’s predictions of the field positions of 10 soccer players are presented in the table below.
+			The classifier's predictions of 10 random soccer players' field positions are presented in the table below.
 		</p>
+		<p>
+			As it is evidence in the result, the classifier correctly predicts all the soccer players' field positions. However, when the accuracy of the classifier is calculated, it revealed that it only classified <strong>31% (+/- 1%)</strong> of the input correctly. 
+		</p>
+		<p>
+			It is worth noting that the real position vs. the predicted position might only be partially correct, e.g. as it is evidence for <strong>Abdulaziz Hatem</strong> and <strong>Tomasz Kupisz</strong>. For <strong>Kupisz</strong> both <strong>Midfielder</strong> and <strong>Forward</strong> are predicted, whereas his real position is only <strong>Midfield</strong>. This would result in an incorrect classification.
+		</p>
+		<h3>Result</h3>
 		<table class="table table-striped">
 			<thead>
 				<tr>

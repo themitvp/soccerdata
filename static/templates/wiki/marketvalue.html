@@ -1,8 +1,78 @@
 <div class="row">
 	<div class="col-sm-12">
 		<p>
-			In this section it will be investigated whether old soccer player are more loyal than young soccer players.
+			In this section a classifier will be trained to predict the market value of soccer players. 
 		</p>
-		
+		<p>
+			Initially, the classifier is trained with a bag-of-words created from the Wikipedia corpus of the soccer players' pages. Next, the classifier will be further trained on a small fraction of the corpus labelled with the correct market value interval. To improve the classifier a market value interval is used instead of the specific market value. This is done as the market value will vary and it will be nearly impossible to predict the exact market value.
+		</p>
+		<p>
+			The table below presents the predictions of 10 random soccer players’ market value interval by the classifier.
+		</p>
+		<p>
+			In the result shows that the classifier only predicts <strong>3 out of 10</strong> market value intervals correctly. Furthermore, the accuracy of the classifier is calculated to <strong>24% (+/- 8%)</strong>. This low percentage corresponds to the findings.
+		</p>
+		<h3>Result</h3>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th class="col-sm-4">Name</th>
+					<th class="col-sm-4">Real Market Value Interval</th>
+					<th class="col-sm-4">Predicted Market Value Interval</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Mikkel Duelund</td>
+					<td>£240'000 - £360'000</td>
+					<td>£0 - £120'000</td>
+				</tr>
+				<tr>
+					<td>Daniel Royer</td>
+					<td>£960'000 - £1'080'000</td>
+					<td>£360'000 - £480'000</td>
+				</tr>
+				<tr>
+					<td>Tim Sparv</td>
+					<td>£600'000 - £720'000</td>
+					<td>£720'000 - £840'000</td>
+				</tr>
+				<tr>
+					<td>Marcos Urena</td>
+					<td>£480'000 - £600'000</td>
+					<td>£480'000 - £600'000</td>
+				</tr>
+				<tr>
+					<td>Paul Onuachu</td>
+					<td>£120'000 - £240'000</td>
+					<td>£360'000 - £480'000</td>
+				</tr>
+				<tr>
+					<td>Dario Dumic</td>
+					<td>£720'000 - £840'000</td>
+					<td>£120'000 - £240'000</td>
+				</tr>
+				<tr>
+					<td>Riza Durmisi</td>
+					<td>£960'000 - £1'080'000</td>
+					<td>£120'000 - £240'000</td>
+				</tr>
+				<tr>
+					<td>Andrew Hjulsager</td>
+					<td>£480'000 - £600'000</td>
+					<td>£720'000 - £840'000</td>
+				</tr>
+				<tr>
+					<td>Mads Toppel</td>
+					<td>£240'000 - £360'000</td>
+					<td>£240'000 - £360'000</td>
+				</tr>
+				<tr>
+					<td>Thomas Kahlenberg</td>
+					<td>£600'000 - £720'000</td>
+					<td>£600'000 - £720'000</td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
 </div>

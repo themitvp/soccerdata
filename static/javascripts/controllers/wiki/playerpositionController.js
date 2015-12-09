@@ -2,5 +2,5 @@ app.controller('playerpositionController', function ($scope, $http, $location, $
     $scope.Page = Page;
     $scope.$routeSegment = $routeSegment;
     
-    Page.setTitle('Player Position');
+    Page.setTitle('Player Position Classifier');
 });
