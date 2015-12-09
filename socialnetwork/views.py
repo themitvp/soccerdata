@@ -41,9 +41,9 @@ class CommunitiesView(viewsets.ViewSet):
         module_dir = os.path.dirname(__file__)  # get current directory
         file_path = os.path.join(module_dir, 'out.csv')
 
-        f = open(file_path)
+        f = open(file_path, 'rU')
 
-        csv_f = csv.reader(f, delimiter=",")
+        csv_f = csv.reader(f, delimiter=",", dialect=csv.excel_tab)
         data = []
         for row in csv_f:
             row_data = {}
