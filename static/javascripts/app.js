@@ -143,7 +143,7 @@ app.config(function ($routeSegmentProvider, $locationProvider, $routeProvider) {
         })
 
         .segment('wordcloud', {
-            templateUrl: '/static/templates/wiki/wordcloud.html?2',
+            templateUrl: '/static/templates/wiki/wordcloud.html?3',
             controller: 'wordcloudController',
             resolve: resolve
         })
