@@ -62,7 +62,7 @@ app.config(function ($routeSegmentProvider, $locationProvider, $routeProvider) {
 
         .segment('home', {
             default: true,
-            templateUrl: '/static/templates/home/home.html?5',
+            templateUrl: '/static/templates/home/home.html?6',
             controller: 'homeController'
         })
 
