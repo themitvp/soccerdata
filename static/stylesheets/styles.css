@@ -149,14 +149,58 @@ img {
   margin-bottom: -20px;
 }
 
+#d3-graph .svg-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%; /* aspect ratio */
+    vertical-align: top;
+    overflow: hidden;
+}
+#d3-graph .svg-content-responsive {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+
+circle.node {
+  fill: lightsteelblue;
+  stroke: #555;
+  stroke-width: 3px;
+}
+
+circle.node.node-active {
+  stroke: #000;
+  stroke-width: 3px;
+}
+
+circle.leaf {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+path.hull {
+  fill: lightsteelblue;
+  fill-opacity: 0.3;
+}
+line.link {
+  stroke: #333;
+  stroke-opacity: 0.5;
+  pointer-events: none;
+}
+
 #d3-graph svg {
   cursor: move;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
 }
 
 #d3-graph svg .node {
   cursor: pointer;
 }
-
+/*
 #d3-graph svg .node-active circle {
   stroke: #000;
   stroke-width: 1.5px;
@@ -186,7 +230,7 @@ img {
   stroke: #000;
   stroke-width: 2;
   stroke-opacity: 1;
-}
+}*/
 
 .tooltip {
   position: absolute;

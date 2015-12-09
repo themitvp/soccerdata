@@ -8,8 +8,8 @@ import os
 
 
 class SocialnetworkView(viewsets.ViewSet):
-    nodes_list = Node.objects.all()[:500]
-    links_list = LinkBetweenNodes.objects.all()[:1000]
+    nodes_list = Node.objects.all()#[:100]
+    links_list = LinkBetweenNodes.objects.all()#[:1000]
 
     nodeSerializer = NodeSerializer
     linkSerializer = LinkSerializer
