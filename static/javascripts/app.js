@@ -62,7 +62,7 @@ app.config(function ($routeSegmentProvider, $locationProvider, $routeProvider) {
 
         .segment('home', {
             default: true,
-            templateUrl: '/static/templates/home/home.html?3',
+            templateUrl: '/static/templates/home/home.html?4',
             controller: 'homeController'
         })
 
@@ -163,7 +163,7 @@ app.config(function ($routeSegmentProvider, $locationProvider, $routeProvider) {
             resolve: resolve
         })
         .segment('transfers', {
-            templateUrl: '/static/templates/extra/transfers.html?2',
+            templateUrl: '/static/templates/extra/transfers.html?3',
             controller: 'transfersController',
             resolve: resolve
         })
