@@ -62,7 +62,7 @@ app.config(function ($routeSegmentProvider, $locationProvider, $routeProvider) {
 
         .segment('home', {
             default: true,
-            templateUrl: '/static/templates/home/home.html?4',
+            templateUrl: '/static/templates/home/home.html?5',
             controller: 'homeController'
         })
 
@@ -143,7 +143,7 @@ app.config(function ($routeSegmentProvider, $locationProvider, $routeProvider) {
         })
 
         .segment('wordcloud', {
-            templateUrl: '/static/templates/wiki/wordcloud.html?3',
+            templateUrl: '/static/templates/wiki/wordcloud.html?4',
             controller: 'wordcloudController',
             resolve: resolve
         })
