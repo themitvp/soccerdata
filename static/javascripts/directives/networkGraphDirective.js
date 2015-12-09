@@ -280,6 +280,9 @@ app.directive('networkGraph', function (){
 
             d3.select(this).classed("node-active", true);
          })
+         .on("mousedown", function(d) {
+            d3.event.stopPropagation();
+         })
          .on("mouseout", function(d) {
             tooltip.hideTooltip();
 
