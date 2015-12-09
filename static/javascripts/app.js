@@ -125,7 +125,7 @@ app.config(function ($routeSegmentProvider, $locationProvider, $routeProvider) {
 
         .segment('wikipages', {
             default: true,
-            templateUrl: '/static/templates/wiki/wikipages.html?2',
+            templateUrl: '/static/templates/wiki/wikipages.html?3',
             controller: 'wikiController',
             resolve: resolve
         })
@@ -137,7 +137,7 @@ app.config(function ($routeSegmentProvider, $locationProvider, $routeProvider) {
         })
 
         .segment('marketvalue', {
-            templateUrl: '/static/templates/wiki/marketvalue.html?2',
+            templateUrl: '/static/templates/wiki/marketvalue.html?3',
             controller: 'marketvalueController',
             resolve: resolve
         })
